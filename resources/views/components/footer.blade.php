@@ -6,19 +6,25 @@
   <!-- Custom JS -->
   <script>
     $(function() {
+            // When the form is submitted
       $('form').on('submit', function(e) {
+              // When the form is submitted
         e.preventDefault();
+                // Get the long URL from the input field
         var longUrl = $('#urlInput').val();
+                // Make an AJAX request to the 'shorten' route
         $.ajax({
           url: '{{ route('shorten') }}', // Use the named route here
           method: 'GET',
           data: { 'original_url': longUrl }, // Pass the longUrl as data
           success: function(response) {
+                        // Handle the success response
             console.log(response);
             var shortUrl = response.short_url;
             $('#shortUrlResult').html('<p><strong>Your shortened URL is</strong>: <a target="_blank" href="' + shortUrl + '">' + shortUrl + '</a></p>');
           },
           error: function() {
+                        // Handle the error response
             $('#shortUrlResult').html('<p>There was an error shortening your URL. Please try again.</p>');
           }
           // console.log(response);
