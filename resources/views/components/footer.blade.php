@@ -21,7 +21,7 @@
           error: function() {
             $('#shortUrlResult').html('<p>There was an error shortening your URL. Please try again.</p>');
           }
-          console.log(response);
+          // console.log(response);
         });
       });
     });

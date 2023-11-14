@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\link;
 use App\Models\randomlink;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class shortlinkController extends Controller
 {
