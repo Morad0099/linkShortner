@@ -1,3 +1,4 @@
+<x-app-layout>
 <x-header>
 </x-header>
 {{-- <x-nav>
@@ -6,3 +7,4 @@
 </x-main>
 <x-footer>
 </x-footer>
+</x-app-layout>
